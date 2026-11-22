@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://k2w35mkr7jl4"]
+
+[ext_resource type="PackedScene" uid="uid://bkjaw5kgm8x05" path="res://Scenes/playerArm.tscn" id="1_6dmow"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0e58w"]
+
+[sub_resource type="Sky" id="Sky_o2ulq"]
+sky_material = SubResource("ProceduralSkyMaterial_0e58w")
+
+[sub_resource type="Environment" id="Environment_bspw5"]
+background_mode = 1
+background_color = Color(0.689391, 0.043279, 0.483567, 1)
+sky = SubResource("Sky_o2ulq")
+
+[node name="WorldArm" type="Node3D" unique_id=1629717583]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1961268611]
+environment = SubResource("Environment_bspw5")
+
+[node name="PlayerArm" parent="." unique_id=2115340684 instance=ExtResource("1_6dmow")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1195482738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 35.7355, -26.1946)
+light_color = Color(0.749332, 0.637133, 0, 1)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1742765585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -21.94991, 264.12903)

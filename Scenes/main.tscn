@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ktq7hma8ygpi"]
+
+[ext_resource type="Script" uid="uid://bmsg4avsxpny2" path="res://scripts/camera_controller.gd" id="1_8gbba"]
+[ext_resource type="PackedScene" uid="uid://teepgjt52e4" path="res://Scenes/worldHand.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://k2w35mkr7jl4" path="res://Scenes/worldArm.tscn" id="2_8gbba"]
+
+[node name="Main" type="Node3D" unique_id=730601468]
+script = ExtResource("1_8gbba")
+
+[node name="WorldHand" parent="." unique_id=1467865845 instance=ExtResource("1_bo1nx")]
+
+[node name="WorldArm" parent="." unique_id=1629717583 instance=ExtResource("2_8gbba")]
